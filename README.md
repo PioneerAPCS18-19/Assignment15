@@ -15,16 +15,14 @@ makeOutWord("[[]]", "word") → "[[word]]"
 
 ## Part 2
 
-Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
+Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign" (using concatenation is helpful).
 
 ### Sample Outputs
-
 ```
-startWord("hippo", "hi") → "hi"
-startWord("hippo", "xip") → "hip"
-startWord("hippo", "i") → "h"
-startWord("h", "ix") → ""
-startWord("hippo", "ix") → ""
+lastTwo("coding") → "codign"
+lastTwo("ab") → "ba"
+lastTwo("a") → "a"
+lastTwo("") → ""
 ```
 
 ## Part 3
@@ -43,13 +41,16 @@ minCat("", "Hello") → ""
 
 ## Part 4
 
-Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so "coding" yields "codign" (using concatenation is helpful).
+Given a string and a second "word" string, we'll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string "hippo" the word "hi" returns "hi" and "xip" returns "hip". The word will be at least length 1.
+
+### Sample Outputs
 
 ```
-lastTwo("coding") → "codign"
-lastTwo("ab") → "ba"
-lastTwo("a") → "a"
-lastTwo("") → ""
+startWord("hippo", "hi") → "hi"
+startWord("hippo", "xip") → "hip"
+startWord("hippo", "i") → "h"
+startWord("h", "ix") → ""
+startWord("hippo", "ix") → ""
 ```
 
 ### Grading
